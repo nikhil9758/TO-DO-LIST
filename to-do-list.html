@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>TO_DO_LIST</title>
+    <script type="text/javascript" src="Script1.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: end;
+        }
+
+        li {
+           display: inline-block;
+            margin: 17px;
+            font-size: 1.5rem;
+            list-style: none;
+        }
+
+        .container {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            border: 7px solid green;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 1rem;
+        }
+
+        .input {
+            text-align: center;
+            position: relative;
+            margin: 1.5rem;
+        }
+
+        input {
+            width: 20rem;
+            height: 2rem;
+            font-size: 1.5rem;
+            padding: 6px;
+        }
+
+        center {
+            font-size: 25px;
+        }
+
+        img {
+            position: absolute;
+            right: 1rem;
+            height: 2rem;
+            /* z-index: 0; */
+            top: 5px;
+            border: 1px solid black;
+        }
+
+        .child {
+            flex: 1 1 0;
+            display: flex;
+            overflow-y: auto;
+            flex-direction: column;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 4px;
+            /* box-shadow: 0 6px 20px 0 rgb(0 6 0 / 20%); */
+            border-radius: 8px;
+            margin: 1rem;
+            display: inline-block;
+            width: 242px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>AboutUS</li>
+        </ul>
+
+    </nav>
+    <div class="container">
+        <div class="child">
+            <h2>TODO APP</h2><br>
+
+            <div class="input">
+
+                <input type="text" name="task" id="task" maxlength="10" placeholder="ADD NEW TASK"><img src="add.png" onclick="add()"><br>
+
+            </div>
+            <div id="addtask"></div>
+
+            <center> Tasks</center>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>
